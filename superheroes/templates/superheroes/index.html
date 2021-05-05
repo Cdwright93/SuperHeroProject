@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Superhero Index</title>
+</head>
+<body>
+<h1>List of Superheroes</h1>
+<ul>
+    {% for Superhero in all_superheroes %}
+    <li><h2> {{Superhero.name}} {% if Superhero.alter_ego == "Spider-Man" %} - Does whatever a spider can. {% endif %}
+    </h2><a href="{% url 'superheroes:detail' Superhero.id%}">see more info</a></li>
+    {% endfor %}
+</ul>
+</body>
+</html>
