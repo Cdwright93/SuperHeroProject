@@ -12,5 +12,6 @@
     </h2><a href="{% url 'superheroes:detail' Superhero.id%}">see more info</a></li>
     {% endfor %}
 </ul>
+<a href="{% url 'superheroes:create_new_hero' %}"> Create a new hero</a>
 </body>
 </html>
