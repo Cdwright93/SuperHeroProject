@@ -20,6 +20,9 @@ def detail(request, superhero_id):
     context = {
         'hero': hero
     }
+    if request.method == "POST":
+        hero.delete()
+        return HttpResponseRedirect(reverse('superheroes:index'))
     return render(request, 'superheroes/details.html', context)
 
 
